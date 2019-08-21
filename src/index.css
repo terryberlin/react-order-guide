@@ -3,3 +3,24 @@ body {
   padding: 30px;
   font-family: sans-serif;
 }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.navbar {
+  margin-bottom: 30px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.ul {
+  list-style-type: none;
+}
+
+.list-group {
+  list-style-type: none;
+}
