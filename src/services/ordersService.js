@@ -8,3 +8,12 @@ const apiEndpoint =
 export function getOrders() {
   return http.get(apiEndpoint);
 }
+
+export function getOrder(orderId) {
+  //return http.get(OrderUrl(orderId));
+  return;
+}
+
+export function saveOrder() {
+  return;
+}
