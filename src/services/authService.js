@@ -1,3 +1,12 @@
+import http from "./httpService";
+import { apiUrl } from "../config.json";
+
+const apiEndpoint = apiUrl + "/auth";
+
+export async function login(email, password) {
+  return http.post(apiEndpoint + "?email=" + email + "&password=" + password);
+}
+
 /*import jwtDecode from "jwt-decode";
 import http from "./httpService";
 import { apiUrl } from "../config.json";

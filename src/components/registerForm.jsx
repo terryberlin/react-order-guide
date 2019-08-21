@@ -24,6 +24,18 @@ class RegisterForm extends Form {
       .label("Name")
   };
 
+  doSubmit = async () => {
+    try {
+      await userService.register(this.state.data);
+    } catch (ex) {
+      if (ex.response && ex.response.status === 400) {
+        const errors = { ...this.state.errors };
+        errors.username = ex.response.data;
+        this.setState({ errors });
+      }
+    }
+  };
+
   // doSubmit = async () => {
   //   //call server, save changes, redirect user to different page
   //   //const username = this.username.current.value;
@@ -48,7 +60,7 @@ class RegisterForm extends Form {
     return (
       <div>
         <h1>Register</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           {this.renderInput("username", "Username")}
           {this.renderInput("password", "Password", "password")}
           {this.renderInput("name", "Name")}
@@ -60,4 +72,3 @@ class RegisterForm extends Form {
 }
 
 export default RegisterForm;
-//onSubmit={this.handleSubmit}
