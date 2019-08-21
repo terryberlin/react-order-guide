@@ -27,6 +27,10 @@ const NavBar = ({ user }) => {
             Groups
           </NavLink>
 
+          <NavLink className="nav-item nav-link" to="/locations">
+            Locations
+          </NavLink>
+
           <NavLink className="nav-item nav-link" to="/prepitems">
             Prep Items
           </NavLink>
